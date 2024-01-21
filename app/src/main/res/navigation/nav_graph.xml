@@ -46,7 +46,7 @@
     <fragment
         android:id="@+id/drawer2Fragment"
         android:name="com.example.jujutsuukaisenfinal.Drawer2Fragment"
-        android:label="no se todavia"
+        android:label="Expansiones de dominio"
         tools:layout="@layout/fragment_drawer2" />
     <fragment
         android:id="@+id/drawer3Fragment"
@@ -75,8 +75,8 @@
         android:label="Nuevo personaje"
         tools:layout="@layout/fragment_nuevo_elemento2" />
     <fragment
-        android:id="@+id/entrenadorFragment"
-        android:name="com.example.jujutsuukaisenfinal.EntrenadorFragment"
-        android:label="fragment_entrenador"
-        tools:layout="@layout/fragment_entrenador" />
+        android:id="@+id/expansionFragment"
+        android:name="com.example.jujutsuukaisenfinal.ExpansionFragment"
+        android:label="fragment_expansion"
+        tools:layout="@layout/fragment_expansion" />
 </navigation>
