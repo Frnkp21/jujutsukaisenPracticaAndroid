@@ -2,16 +2,16 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/drawer1Fragment"
-        android:icon="@android:drawable/ic_menu_directions"
+        android:icon="@drawable/baseline_search_24"
         android:title="Buscador De personajes" />
 
     <item
         android:id="@+id/drawer2Fragment"
-        android:icon="@android:drawable/ic_menu_directions"
+        android:icon="@drawable/baseline_account_balance_24"
         android:title="Expansiones de dominio" />
 
     <item
         android:id="@+id/drawer3Fragment"
-        android:icon="@android:drawable/ic_menu_directions"
+        android:icon="@drawable/baseline_accessibility_24"
         android:title="Personajes" />
 </menu>
