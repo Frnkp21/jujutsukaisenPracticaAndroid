@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/recyclerElementosFragment">
+
+    <fragment
+        android:id="@+id/recyclerElementosFragment"
+        android:name="com.example.jujutsuukaisenfinal.RecyclerElementosFragment"
+        android:label="Opiniones"
+        tools:layout="@layout/fragment_recycler_elementos" />
+    <fragment
+        android:id="@+id/recyclerValoracionFragment"
+        android:name="com.example.jujutsuukaisenfinal.RecyclerValoracionFragment"
+        android:label="Valoraciones"
+        tools:layout="@layout/fragment_recycler_valoracion" />
+    <fragment
+        android:id="@+id/recyclerBuscarFragment"
+        android:name="com.example.jujutsuukaisenfinal.RecyclerBusquedaFragment"
+        android:label="Buscador"
+        tools:layout="@layout/fragment_recycler_buscar" />
+
+    <action
+        android:id="@+id/action_mostrarElementoFragment"
+        app:destination="@id/mostrarElementoFragment" />
+    <action
+        android:id="@+id/action_nuevoElementoFragment"
+        app:destination="@id/nuevoElementoFragment" />
+
+    <fragment
+        android:id="@+id/nuevoElementoFragment"
+        android:name="com.example.jujutsuukaisenfinal.NuevoElementoFragment"
+        android:label="Nueva Valoracion"
+        tools:layout="@layout/fragment_nuevo_elemento" />
+    <fragment
+        android:id="@+id/mostrarElementoFragment"
+        android:name="com.example.jujutsuukaisenfinal.MostrarElementoFragment"
+        android:label="Valoracion"
+        tools:layout="@layout/fragment_mostrar_elemento" />
+    <fragment
+        android:id="@+id/drawer1Fragment"
+        android:name="com.example.jujutsuukaisenfinal.Drawer1Fragment"
+        android:label="buscador"
+        tools:layout="@layout/fragment_drawer1" />
+    <fragment
+        android:id="@+id/drawer2Fragment"
+        android:name="com.example.jujutsuukaisenfinal.Drawer2Fragment"
+        android:label="no se todavia"
+        tools:layout="@layout/fragment_drawer2" />
+    <fragment
+        android:id="@+id/drawer3Fragment"
+        android:name="com.example.jujutsuukaisenfinal.Drawer3Fragment"
+        android:label="Personajes"
+        tools:layout="@layout/fragment_drawer3" />
+    <fragment
+        android:id="@+id/personajesFragment"
+        android:name="com.example.jujutsuukaisenfinal.PersonajesFragment"
+        android:label="personajes"
+        tools:layout="@layout/fragment_personajes" />
+    <action
+        android:id="@+id/action_mostrarElemento2Fragment"
+        app:destination="@id/mostrarElemento2Fragment" />
+    <action
+        android:id="@+id/action_nuevoElemento2Fragment"
+        app:destination="@id/nuevoElemento2Fragment" />
+    <fragment
+        android:id="@+id/mostrarElemento2Fragment"
+        android:name="com.example.jujutsuukaisenfinal.MostrarElemento2Fragment"
+        android:label="Personaje"
+        tools:layout="@layout/fragment_mostrar_elemento2" />
+    <fragment
+        android:id="@+id/nuevoElemento2Fragment"
+        android:name="com.example.jujutsuukaisenfinal.NuevoElemento2Fragment"
+        android:label="Nuevo personaje"
+        tools:layout="@layout/fragment_nuevo_elemento2" />
+    <fragment
+        android:id="@+id/entrenadorFragment"
+        android:name="com.example.jujutsuukaisenfinal.EntrenadorFragment"
+        android:label="fragment_entrenador"
+        tools:layout="@layout/fragment_entrenador" />
+</navigation>
