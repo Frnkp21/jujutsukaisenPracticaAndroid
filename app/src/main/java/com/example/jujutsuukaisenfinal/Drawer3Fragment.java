@@ -15,7 +15,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RatingBar;
 
 import com.example.jujutsuukaisenfinal.databinding.FragmentDrawer3Binding;
 import com.example.jujutsuukaisenfinal.databinding.ViewholderElemento2Binding;
@@ -93,25 +92,21 @@ public class Drawer3Fragment extends Fragment {
         @NonNull
         @Override
         public Elemento2ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            return new Elemento2ViewHolder(ViewholderElemento2Binding.inflate(getLayoutInflater(), parent, false));
+            return new Elemento2ViewHolder(ViewholderElemento2Binding.inflate(LayoutInflater.from(parent.getContext()), parent, false));
         }
 
         @Override
         public void onBindViewHolder(@NonNull Elemento2ViewHolder holder, int position) {
-
             Elemento2 elemento2 = this.elemento2.get(position);
 
             holder.binding.nombre2.setText(elemento2.nombre2);
-            holder.binding.valoracion.setRating(elemento2.valoracion);
+            holder.binding.tipoMostrado.setText(elemento2.tipo);
 
-            holder.binding.valoracion.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
-                @Override
-                public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
-                    if(fromUser) {
-                        elemento2ViewModel.actualizar(elemento2, rating);
-                    }
-                }
-            });
+            // Carga la imagen asociada al elemento en el ImageView
+            int imagenResId = elemento2.getImagenResId();
+            if (imagenResId != 0) {
+                holder.binding.imagenElemento.setImageResource(imagenResId);
+            }
 
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -136,4 +131,5 @@ public class Drawer3Fragment extends Fragment {
             return elemento2.get(posicion);
         }
     }
+
 }

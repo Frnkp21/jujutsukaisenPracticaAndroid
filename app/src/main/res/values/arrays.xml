@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tipos_array">
+        <item>Especial</item>
+        <item>Categoria 1</item>
+        <item>Categoria 2</item>
+        <item>Categoria 3</item>
+        <item>Categoria 4</item>
+        <!-- Agrega más elementos según sea necesario -->
+    </string-array>
+    <string name="seleccionar_tipo">Selecciona un tipo</string>
+</resources>

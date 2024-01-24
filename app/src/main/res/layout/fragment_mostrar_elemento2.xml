@@ -7,22 +7,30 @@
     android:padding="16dp"
     tools:context=".MostrarElementoFragment">
 
+    <ImageView
+        android:id="@+id/imagenElemento"
+        android:layout_width="234dp"
+        android:layout_height="238dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop" />
+
     <TextView
         android:id="@+id/nombre2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="48sp"
-        android:textStyle="bold"/>
-    <RatingBar
-        android:id="@+id/valoracion"
-        android:layout_width="wrap_content"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tipoMostrado"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:numStars="5"
-        android:progressTint="#FFEC00"/>
+        android:textSize="24sp" />
+
     <TextView
         android:id="@+id/descripcion2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="24sp"/>
+        android:textSize="24sp" />
 
 </LinearLayout>

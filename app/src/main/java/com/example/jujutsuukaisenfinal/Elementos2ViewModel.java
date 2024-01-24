@@ -46,8 +46,8 @@ public class Elementos2ViewModel extends AndroidViewModel {
         });
     }
 
-    void actualizar(Elemento2 elemento2, float valoracion) {
-        elementos2Repositorio.actualizar(elemento2, valoracion, new Elementos2Repositorio.Callback() {
+    void actualizar(Elemento2 elemento2, String tipo) {
+        elementos2Repositorio.actualizar(elemento2, tipo, new Elementos2Repositorio.Callback() {
             @Override
             public void cuandoFinalice(List<Elemento2> elementos2) {
                 listElementos2MutableLiveData.setValue(elementos2);
@@ -62,7 +62,6 @@ public class Elementos2ViewModel extends AndroidViewModel {
     MutableLiveData<Elemento2> seleccionado() {
         return elemento2Seleccionado;
     }
-
 
     public LiveData<List<Elemento2>> obtenerElementos2MutableLiveData() {
         return listElementos2MutableLiveData;

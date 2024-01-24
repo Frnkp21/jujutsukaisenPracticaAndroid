@@ -14,13 +14,15 @@
         android:hint="Nombre"
         android:textStyle="bold"
         android:textSize="32sp"/>
+
     <EditText
         android:id="@+id/descripcion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Descripcion"
+        android:hint="Nombre del personaje + opinion"
         android:textStyle="bold"
         android:textSize="32sp"/>
+
     <Button
         android:id="@+id/crear"
         android:layout_width="match_parent"

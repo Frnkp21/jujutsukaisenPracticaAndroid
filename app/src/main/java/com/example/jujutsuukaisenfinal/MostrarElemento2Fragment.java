@@ -23,7 +23,6 @@ public class MostrarElemento2Fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         return (binding = FragmentMostrarElemento2Binding.inflate(inflater, container, false)).getRoot();
     }
 
@@ -37,17 +36,12 @@ public class MostrarElemento2Fragment extends Fragment {
             public void onChanged(Elemento2 elemento2) {
                 binding.nombre2.setText(elemento2.nombre2);
                 binding.descripcion2.setText(elemento2.descripcion2);
-                binding.valoracion.setRating(elemento2.valoracion);
+                binding.tipoMostrado.setText("Tipo: " + elemento2.getTipo());
 
-                binding.valoracion.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
-                    @Override
-                    public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
-                        if(fromUser){
-                            elementos2ViewModel.actualizar(elemento2, rating);
-                        }
-                    }
-                });
+                // Cargar y establecer la imagen en el ImageView
+                binding.imagenElemento.setImageResource(elemento2.getImagenResId());
             }
         });
     }
 }
+
